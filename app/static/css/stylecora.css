@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+body.cora2 {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  svg.model2 {
+    overflow: visible;
+}
+svg path#line {
+    fill: none;
+    stroke: #e00000;
+    stroke-width: 2;
+    stroke-linecap: butt;
+    stroke-linejoin: round;
+    stroke-miterlimit: 4;
+    stroke-dasharray:none;
+    stroke-opacity: 1;
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    animation: dash 4s linear infinite;
+}
+svg path#heart {
+    transform-origin: 50% 50%;
+    animation: blink 4s linear infinite;
+}
+  
+@keyframes dash {
+    0% {
+        stroke-dashoffset: 1;
+    }
+    80% {
+        stroke-dashoffset: 0;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+  
+@keyframes blink {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    60% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    70% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    75% {
+        opacity: 1;
+        transform: scale(1.0);
+    }
+    80% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    85% {
+        opacity: 1;
+        transform: scale(1.0);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.0);
+    }
+}
+.letra{
+    list-style-type: none;
+    min-height: 100vh;
+    overflow: hidden;
+    z-index: 1;
+}
+
+h2{
+    display: flex;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+    min-height: 25vh;
+    text-transform: uppercase;
+    font-variant-caps: normal;
+    font-size: 6vw;
+    font-weight: bold;
+    text-shadow: 0 0 5px #ffffff,0 0 10px #ffcccc,0 0 20px #ff9999,0 0 30px #ff6666;
+    animation: moveText 5s infinite linear;
+    color: white;
+    
+    /*background: rgba(23, 24, 24, 0.273);;*/
+    /*font-family: 'Fraktur', serif;
+    font-family: 'Old English Text MT', 'Fraktur', serif;
+    font-size: 6vw;
+    text-shadow: 0 0 5px #cd0202,0 0 10px #cd0202,0 0 20px #cd0202,0 0 40px #cd0202,0 0 80px #cd0202,0 0 90px #cd0202;
+    animation: glow 1.5s infinite;*/
+}
+/*@keyframes glow{
+    0%{
+        text-shadow: 0 0 5px #ff00ff,0 0 10px #ff00ff,0 0 20px #ff00ff,0 0 40px #ff00ff,0 0 80px #ff00ff,0 0 90px #ff00ff;
+    }
+    50%{
+        text-shadow: 0 0 5px #ff00ff,0 0 10px #ff00ff,0 0 20px #ff00ff,0 0 40px #ff00ff,0 0 80px #ff00ff,0 0 90px #ff00ff;
+    }
+    100%{
+        text-shadow: 0 0 5px #ff00ff,0 0 10px #ff00ff,0 0 20px #ff00ff,0 0 40px #ff00ff,0 0 80px #ff00ff,0 0 90px #ff00ff;
+    }
+}*/
+@keyframes moveText{
+    0%{
+        transform: translateX(-100%);
+        z-index: 1;
+    }
+    50%{
+        transform: translateX(10%);
+        z-index: 1;
+    }
+    100%{
+        transform: translateX(-100%);
+        z-index: 1;
+    }
+}

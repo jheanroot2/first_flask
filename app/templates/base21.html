@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" class="ajuste">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Base Template{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/stylebase.css')}}">
+</head>
+<body class="base21">
+    <nav class="navb">
+        <ul class="sidebar">
+            <li onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li><a href="{{ url_for('corazon')}}">Corazon</a></li>
+            <li><a href="#">Corazon x</a></li>
+            <li><a href="#">Login</a></li>
+        </ul>
+        <ul>
+            <li><a href="/">JHEAN C</a></li>
+            <li class="hideOnMobile"><a href="{{ url_for('corazon')}}">Corazon</a></li>
+            <li class="hideOnMobile"><a href="#">Corazon x</a></li>
+            <li class="hideOnMobile"><a href="#">Login</a></li>
+            <li class="menu-button" onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
+    </nav>
+    <script src="{{url_for('static', filename='js/codigo01.js')}}"></script>
+    
+    
+</body>
+<main>
+    {% block content %}
+    {% endblock %}
+</main>
+</html>
